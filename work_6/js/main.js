@@ -1,7 +1,7 @@
 // map: Создайте функцию, которая принимает массив чисел и возвращает новый массив, где каждое число увеличено на 10.
 function task_1() {
     function getArray(array) {
-        return array.map((elem) => elem * 10)
+        return array.map((elem) => elem + 10)
     }
 
     let a = [1,2,3,4,5];
@@ -151,7 +151,7 @@ function task_12() {
 // Если в массиве нет таких чисел, функция должна вернуть null.
 
 function task_13() {
-    const findShareSeven = (array) => array.find((item) => item % 7 === 0) || null;
+    const findShareSeven = (array) => array.find((item) => !(item % 7)) || null;
     const numbers = [1,7,3,4,5];
     console.log(findShareSeven(numbers))
 }
