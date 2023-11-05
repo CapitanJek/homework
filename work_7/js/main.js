@@ -153,16 +153,20 @@ let getSumArr = arr.myReduce((cur , item) => {
 // mySort
 
 Array.prototype.mySort = function (callback)  {
-  for (let j = 0; j < this.length - 1; j++) {
-      for (let i = 0; i < this.length - 1; i++ ) {
-          if (callback(this[i], this[i + 1])) {
-              let temp = this[i];
-              this[i] = this[i + 1];
-              this[i + 1] = temp
+    let result = [...this]
+  for (let j = 0; j < result.length - 1; j++) {
+      for (let i = 0; i < result.length - 1; i++ ) {
+          if (callback(result[i], result[i + 1])) {
+              let temp = result[i];
+              result[i] = result[i + 1];
+              result[i + 1] = temp
           }
       }
   }
+  return result
 }
 
 let num = [1,3,5,6,2,4];
-console.log()
+console.log(num.mySort((a,b) => {
+   return  a > b
+}))
