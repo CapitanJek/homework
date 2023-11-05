@@ -160,24 +160,7 @@
 //
 //
 // // ДОП ЗАДАНИЯ:
-// //
-// // Задания для строк:
-// //
-// // Сложное задание (declaration function):
-// // Создайте функцию findUniqueWords, которая принимает строку и возвращает массив уникальных слов (без повторений) в этой строке, игнорируя регистр букв.
-// // В данном случае, вы можете использовать объект для отслеживания уникальных слов.
-//
-// // function findUniqueWords(obj) {
-// //    let array = obj.toLowerCase().split(' ');
-// //
-// //
-// // }
-// // const a = 'I love you';
-// //
-// //
-// // console.log(findUniqueWords(a))
-//
-//
+
 // // Сложное задание (declaration function):
 // // Создайте функцию calculateAverage, которая принимает массив чисел и использует цикл для вычисления среднего значения всех чисел в массиве.
 // // Верните полученное среднее значение.
@@ -226,3 +209,21 @@
 // let numbers1 = [1,2,2,3,4,5,6,1];
 // console.log(findUniqueNumbers(numbers1))
 
+// Сложное задание (declaration function):
+// Создайте функцию findUniqueWords, которая принимает строку и возвращает массив уникальных слов (без повторений) в этой строке, игнорируя регистр букв.
+// В данном случае, вы можете использовать объект для отслеживания уникальных слов.
+
+function findUniqueWords(array) {
+    let newArray = array.toLowerCase().split(" ");
+    let uniqueWorlds = newArray[0];
+    for (let i = 0; i < newArray.length; i++) {
+        if (newArray[i] === uniqueWorlds) {
+            newArray[i]
+        }
+    }
+
+}
+
+
+const world = 'Hello world world'
+console.log(findUniqueWords(world))

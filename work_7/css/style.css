@@ -1,0 +1,22 @@
+body {
+    background-color: #2B2B2B;
+}
+
+.home_work {
+    color: #E8BF65;
+
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+}
+
+
+.task {
+    color: #E8BF65;
+    background-color: #2B2B2B;
+}
+
