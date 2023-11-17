@@ -118,19 +118,19 @@
 // //     return array.filter((item, index) => index === array.indexOf(item))
 // // }
 
-// Напишите функцию, которая принимает массив объектов и сортирует их по полю "имя" в алфавитном порядке.
+//Напишите функцию, которая принимает массив объектов и сортирует их по полю "имя" в алфавитном порядке.
 
-// function getSortName(array) {
-//     return  array.sort(function (a, b) {
-//         if (a.name > b.name) {
-//             return 1;
-//         }
-//         if (a.name < b.name) {
-//             return -1;
-//         }
-//         return 0;
-//     });
-// }
+function getSortName(array) {
+    return  array.sort(function (a, b) {
+        if (a.name > b.name) {
+            return 1;
+        }
+        if (a.name < b.name) {
+            return -1;
+        }
+        return 0;
+    });
+}
 
 // //  Напишите функцию, которая принимает массив чисел и возвращает новый массив, содержащий только четные числа.
 //
@@ -151,13 +151,15 @@
 //     })
 // }
 //
-// let salary = [
-//     { name: "azim", salary: 21000 },
-//     { name: "erika", salary: 57000 },
-//     { name: "nuray", salary: 65000 },
-//     { name: "begus", salary: 30000 }
-//
-// ];
+let salary = [
+    { name: "azim", salary: 21000 },
+    { name: "erika", salary: 57000 },
+    { name: "nuray", salary: 65000 },
+    { name: "begus", salary: 30000 }
+
+];
+
+console.log(getSortName(salary))
 //
 // console.log(getBigSalary(salary))
 
