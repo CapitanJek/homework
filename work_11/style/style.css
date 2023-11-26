@@ -1,0 +1,17 @@
+body {
+    background-color: #2b2b2b;
+    color: #e8bf65;
+}
+
+.image {
+    width: 600px;
+    height: 900px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    font-family: Tahoma;
+    color: #e8bf65;
+    background-color: #2b2b2b;
+}
