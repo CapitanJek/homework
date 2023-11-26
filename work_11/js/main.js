@@ -9,11 +9,8 @@
 //
 //
 //
-// Создайте h1 с классом "output-text". Создайте input type="text" с классом "input-text". При каждом изменении ".input-text" меняйте содержимое ".output-text" на значение из ".input-text".
 //
-// Создайте div размером 500px * 500px, по нажатию на неё выводите в консоль позицию места куда вы нажали относительно div- а;
 //
-// Создайте input type color. При изменении инпута меняйте цвет заднего фона body на значение из этого инпута
 let keyOld = '';
     document.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
@@ -37,10 +34,38 @@ let keyOld = '';
 // document.addEventListener('keydown', (event) => console.log(i *= 2))
 
 // Вставьте картинку и кнопку в html. При нажатии на кнопку скройте картинку путем затухания до прозрачного состояния.
+const image = document.querySelector('.image')
+const hideImage = () => image.style.cssText = `opacity: 0;`;
+const showImage = () => image.style.cssText = `opacity: 1;`;
 
-function deleteImage() {
+// Создайте h1 с классом "output-text". Создайте input type="text" с классом "input-text". При каждом изменении ".input-text" меняйте содержимое
+// ".output-text" на значение из ".input-text".
 
-}
+const h1 = document.createElement('h1')
+h1.classList.add('output_text')
+
+const input = document.createElement('input')
+input.classList.add('input_text')
+
+
+input.addEventListener('input', ({target: {value}}) => {
+    h1.innerText = value
+})
+
+document.body.append(h1,input )
+
+
+// Создайте div размером 500px * 500px, по нажатию на неё выводите в консоль позицию места куда вы нажали относительно div- а;
+const coordinates = document.querySelector('.div_coordinates');
+coordinates.addEventListener('click', (event) => {
+    console.log(`x = ${event.offsetX} y = ${event.offsetY}`)
+})
+
+// Создайте input type color. При изменении инпута меняйте цвет заднего фона body на значение из этого инпута
+const input_color = document.querySelector('.color');
+input_color.addEventListener('input', ({target: {value}}) => {
+    document.body.style.backgroundColor = value
+})
 
 
 
